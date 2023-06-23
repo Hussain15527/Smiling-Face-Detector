@@ -1,8 +1,8 @@
 import cv2
 
 # Load the Haar cascade classifier for detecting faces and smiles
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-smile_cascade = cv2.CascadeClassifier('haarcascade_smile.xml')
+smile_cascade = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_smile.xml')
+face_cascade=cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml") #Note the change
 
 # Open the default camera
 cap = cv2.VideoCapture(0)
